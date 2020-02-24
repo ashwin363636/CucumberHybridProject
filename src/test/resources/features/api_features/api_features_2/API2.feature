@@ -1,0 +1,7 @@
+Feature: Testing the Twitter's twite APIs
+
+  Scenario: Create and access a twite
+    Given I am authenticated into Twitter application
+    When I make a random twite
+    Then the twite is created on my wall
+    And I can get <6> twite's made by me
