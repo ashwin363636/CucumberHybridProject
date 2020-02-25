@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.lang.reflect.Type;
 
 public class APIUtils {
+
     public static final TypeAdapter<Number> UNRELIABLE_INTEGER = new TypeAdapter<Number>() {
         @Override
         public Number read(JsonReader in) throws IOException {
@@ -44,4 +45,10 @@ public class APIUtils {
         }
     };
     public static final TypeAdapterFactory UNRELIABLE_INTEGER_FACTORY = TypeAdapters.newFactory(int.class, Integer.class, UNRELIABLE_INTEGER);
+
+    //Specify all one time default Gson config
+    public static Gson gson() {
+        GsonBuilder gsonBuilder = new GsonBuilder();
+       return gsonBuilder.create();
+    }
 }

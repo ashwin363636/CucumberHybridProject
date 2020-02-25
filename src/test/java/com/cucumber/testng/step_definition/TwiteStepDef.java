@@ -34,6 +34,7 @@ public class TwiteStepDef {
 
     @When("I make a random twite")
     public void i_make_a_random_twite() {
+        
         createTwiteResponse = twitterActions.twite(twite);
     }
 

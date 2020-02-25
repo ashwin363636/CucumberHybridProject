@@ -1,50 +1,51 @@
 package com.cucumber.testng.runner;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.testng.CucumberFeatureWrapper;
-import cucumber.api.testng.TestNGCucumberRunner;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import com.cucumber.testng.runner.testng_listeners.BaseRunner;
+import io.cucumber.testng.*;
+import org.testng.annotations.*;
+
 
 @CucumberOptions(
-        features="src/test/resources/features",
-        glue={"com.cucumber.testng.stepdef"},
-        format=
-                {"pretty",
-                        "html:target/cucumber-reports/cucumber-pretty",
-                        "json:target/cucumber-reports/CucumberTestReport.json",
-                        "rerun:target/cucumber-reports/re-run.txt"}
+        features = "src/test/resources/features",
+        glue = {"com.cucumber.testng.step_definition"},
+        tags = {"not @Sequential"},
+        plugin = {"pretty", "html:target/cucumber-report/single",
+                "json:target/cucumber-report/single/cucumber.json",
+                "rerun:target/cucumber-report/single/rerun.txt",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
-public class ParallelRunner
-{
-    public static WebDriver driver;
-    private TestNGCucumberRunner testRunner;
+public class ParallelRunner extends BaseRunner {
+    private io.cucumber.testng.TestNGCucumberRunner testNGCucumberRunner;
 
-    @BeforeClass
-    public void setUP()
-    {
-        //System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        //driver = new ChromeDriver();
-        testRunner = new TestNGCucumberRunner(ParallelRunner.class);
+    @BeforeClass(alwaysRun = true)
+    public void setUpClass() {
+        testNGCucumberRunner = new TestNGCucumberRunner(ParallelRunner.class);
+    }
 
+    @Test(groups = "cucumber", description = "Runs Cucumber Scenarios", dataProvider = "scenarios")
+    public void runScenario(PickleEventWrapper pickleWrapper, CucumberFeatureWrapper featureWrapper) throws Throwable {
+        testNGCucumberRunner.runScenario(pickleWrapper.getPickleEvent());
     }
-    @Test(description="login",dataProvider="features")
-    public void login(CucumberFeatureWrapper cFeature)
-    {
-        testRunner.runCucumber(cFeature.getCucumberFeature());
+
+    /**
+     * Returns two dimensional array of PickleEventWrapper scenarios
+     * with their associated CucumberFeatureWrapper feature.
+     *
+     * @return a two dimensional array of scenarios features.
+     */
+    @DataProvider(parallel = true)
+    public Object[][] scenarios() {
+        if (testNGCucumberRunner == null) {
+            return new Object[0][0];
+        }
+        return testNGCucumberRunner.provideScenarios();
     }
-    @DataProvider(name="features")
-    public Object[][] getFeatures()
-    {
-        return testRunner.provideFeatures();
-    }
-    @AfterClass
-    public void tearDown()
-    {
-        testRunner.finish();
+
+    @AfterClass(alwaysRun = true)
+    public void tearDownClass() {
+        if (testNGCucumberRunner == null) {
+            return;
+        }
+        testNGCucumberRunner.finish();
     }
 }
