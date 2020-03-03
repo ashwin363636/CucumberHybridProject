@@ -1,6 +1,5 @@
 Feature: Testing the Twitter's twite APIs
 
-  DriverFactoryug
   Scenario: Create and access a twite
     Given I am authenticated into Twitter application
     When I make a random twite

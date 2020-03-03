@@ -1,12 +1,15 @@
 package com.cucumber.testng.action;
 
+import com.cucumber.testng.application_utils.ui.web_utils.WebDriverFactory;
 import com.cucumber.testng.model.LoginCredentials;
 import com.cucumber.testng.page_objects.web.BoxPage;
 import com.cucumber.testng.page_objects.web.LoginPage;
 import com.cucumber.testng.page_objects.web.MenuPage;
 import com.cucumber.testng.project_constants.constants.Settings;
-import com.cucumber.testng.application_utils.web_utils.WebDriverFactory;
-import static com.cucumber.testng.application_utils.web_utils.WebApplicationLauncher.launchAUT;
+
+import java.io.IOException;
+
+import static com.cucumber.testng.application_utils.ui.web_utils.WebApplicationLauncher.launchWebAUT;
 import static com.cucumber.testng.utilities.extent_reports_utils.ExtentReportUtil.log;
 
 public class LoginActions {
@@ -22,10 +25,9 @@ public class LoginActions {
         this.boxPage = boxPage;
     }
 
-    public void launchApplication(){
-        System.out.println("launchApplication");
+    public void launchApplication() throws IOException {
         WebDriverFactory.createDriverInstance(Settings.BrowserType);
-        loginPage = launchAUT();
+        loginPage = launchWebAUT();
     }
 
     public void performLogin(LoginCredentials credentials){

@@ -1,577 +1,380 @@
-
 package com.cucumber.testng.model;
 
-import java.util.HashMap;
-import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.cucumber.testng.model.Entities;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "id",
-    "id_str",
-    "name",
-    "screen_name",
-    "location",
-    "description",
-    "url",
-    "entities",
-    "protected",
-    "followers_count",
-    "friends_count",
-    "listed_count",
-    "created_at",
-    "favourites_count",
-    "utc_offset",
-    "time_zone",
-    "geo_enabled",
-    "verified",
-    "statuses_count",
-    "lang",
-    "contributors_enabled",
-    "is_translator",
-    "is_translation_enabled",
-    "profile_background_color",
-    "profile_background_image_url",
-    "profile_background_image_url_https",
-    "profile_background_tile",
-    "profile_image_url",
-    "profile_image_url_https",
-    "profile_banner_url",
-    "profile_link_color",
-    "profile_sidebar_border_color",
-    "profile_sidebar_fill_color",
-    "profile_text_color",
-    "profile_use_background_image",
-    "has_extended_profile",
-    "default_profile",
-    "default_profile_image",
-    "following",
-    "follow_request_sent",
-    "notifications",
-    "translator_type"
-})
 public class User {
-
-    @JsonProperty("id")
-    private Integer id;
-    @JsonProperty("id_str")
-    private String idStr;
-    @JsonProperty("name")
+    private long id;
+    private String id_str;
     private String name;
-    @JsonProperty("screen_name")
-    private String screenName;
-    @JsonProperty("location")
+    private String screen_name;
     private String location;
-    @JsonProperty("description")
     private String description;
-    @JsonProperty("url")
-    private String url;
-    @JsonProperty("entities")
-    private Entities_ entities;
-    @JsonProperty("protected")
-    private Boolean _protected;
-    @JsonProperty("followers_count")
-    private Integer followersCount;
-    @JsonProperty("friends_count")
-    private Integer friendsCount;
-    @JsonProperty("listed_count")
-    private Integer listedCount;
-    @JsonProperty("created_at")
-    private String createdAt;
-    @JsonProperty("favourites_count")
-    private Integer favouritesCount;
-    @JsonProperty("utc_offset")
-    private Object utcOffset;
-    @JsonProperty("time_zone")
-    private Object timeZone;
-    @JsonProperty("geo_enabled")
-    private Object geoEnabled;
-    @JsonProperty("verified")
-    private Boolean verified;
-    @JsonProperty("statuses_count")
-    private Integer statusesCount;
-    @JsonProperty("lang")
-    private String lang;
-    @JsonProperty("contributors_enabled")
-    private Object contributorsEnabled;
-    @JsonProperty("is_translator")
-    private Object isTranslator;
-    @JsonProperty("is_translation_enabled")
-    private Object isTranslationEnabled;
-    @JsonProperty("profile_background_color")
-    private String profileBackgroundColor;
-    @JsonProperty("profile_background_image_url")
-    private String profileBackgroundImageUrl;
-    @JsonProperty("profile_background_image_url_https")
-    private String profileBackgroundImageUrlHttps;
-    @JsonProperty("profile_background_tile")
-    private Object profileBackgroundTile;
-    @JsonProperty("profile_image_url")
-    private String profileImageUrl;
-    @JsonProperty("profile_image_url_https")
-    private String profileImageUrlHttps;
-    @JsonProperty("profile_banner_url")
-    private String profileBannerUrl;
-    @JsonProperty("profile_link_color")
-    private String profileLinkColor;
-    @JsonProperty("profile_sidebar_border_color")
-    private String profileSidebarBorderColor;
-    @JsonProperty("profile_sidebar_fill_color")
-    private String profileSidebarFillColor;
-    @JsonProperty("profile_text_color")
-    private String profileTextColor;
-    @JsonProperty("profile_use_background_image")
-    private Object profileUseBackgroundImage;
-    @JsonProperty("has_extended_profile")
-    private Object hasExtendedProfile;
-    @JsonProperty("default_profile")
-    private Boolean defaultProfile;
-    @JsonProperty("default_profile_image")
-    private Boolean defaultProfileImage;
-    @JsonProperty("following")
-    private Object following;
-    @JsonProperty("follow_request_sent")
-    private Object followRequestSent;
-    @JsonProperty("notifications")
-    private Object notifications;
-    @JsonProperty("translator_type")
-    private String translatorType;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    private String url = null;
+    Entities EntitiesObject;
+    private boolean protectedkey;
+    private float followers_count;
+    private float friends_count;
+    private float listed_count;
+    private String created_at;
+    private float favourites_count;
+    private String utc_offset = null;
+    private String time_zone = null;
+    private boolean geo_enabled;
+    private boolean verified;
+    private float statuses_count;
+    private String lang = null;
+    private boolean contributors_enabled;
+    private boolean is_translator;
+    private boolean is_translation_enabled;
+    private String profile_background_color;
+    private String profile_background_image_url = null;
+    private String profile_background_image_url_https = null;
+    private boolean profile_background_tile;
+    private String profile_image_url;
+    private String profile_image_url_https;
+    private String profile_link_color;
+    private String profile_sidebar_border_color;
+    private String profile_sidebar_fill_color;
+    private String profile_text_color;
+    private boolean profile_use_background_image;
+    private boolean has_extended_profile;
+    private boolean default_profile;
+    private boolean default_profile_image;
+    private boolean following;
+    private boolean follow_request_sent;
+    private boolean notifications;
+    private String translator_type;
 
-    @JsonProperty("id")
-    public Integer getId() {
+
+    // Getter Methods
+
+    public long getId() {
         return id;
     }
 
-    @JsonProperty("id")
-    public void setId(Integer id) {
-        this.id = id;
+    public String getId_str() {
+        return id_str;
     }
 
-    @JsonProperty("id_str")
-    public String getIdStr() {
-        return idStr;
-    }
-
-    @JsonProperty("id_str")
-    public void setIdStr(String idStr) {
-        this.idStr = idStr;
-    }
-
-    @JsonProperty("name")
     public String getName() {
         return name;
     }
 
-    @JsonProperty("name")
-    public void setName(String name) {
-        this.name = name;
+    public String getScreen_name() {
+        return screen_name;
     }
 
-    @JsonProperty("screen_name")
-    public String getScreenName() {
-        return screenName;
-    }
-
-    @JsonProperty("screen_name")
-    public void setScreenName(String screenName) {
-        this.screenName = screenName;
-    }
-
-    @JsonProperty("location")
     public String getLocation() {
         return location;
     }
 
-    @JsonProperty("location")
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    @JsonProperty("description")
     public String getDescription() {
         return description;
     }
 
-    @JsonProperty("description")
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    @JsonProperty("url")
     public String getUrl() {
         return url;
     }
 
-    @JsonProperty("url")
-    public void setUrl(String url) {
-        this.url = url;
+    public Entities getEntities() {
+        return EntitiesObject;
     }
 
-    @JsonProperty("entities")
-    public Entities_ getEntities() {
-        return entities;
+    public boolean getProtected() {
+        return protectedkey;
     }
 
-    @JsonProperty("entities")
-    public void setEntities(Entities_ entities) {
-        this.entities = entities;
+    public float getFollowers_count() {
+        return followers_count;
     }
 
-    @JsonProperty("protected")
-    public Boolean getProtected() {
-        return _protected;
+    public float getFriends_count() {
+        return friends_count;
     }
 
-    @JsonProperty("protected")
-    public void setProtected(Boolean _protected) {
-        this._protected = _protected;
+    public float getListed_count() {
+        return listed_count;
     }
 
-    @JsonProperty("followers_count")
-    public Integer getFollowersCount() {
-        return followersCount;
+    public String getCreated_at() {
+        return created_at;
     }
 
-    @JsonProperty("followers_count")
-    public void setFollowersCount(Integer followersCount) {
-        this.followersCount = followersCount;
+    public float getFavourites_count() {
+        return favourites_count;
     }
 
-    @JsonProperty("friends_count")
-    public Integer getFriendsCount() {
-        return friendsCount;
+    public String getUtc_offset() {
+        return utc_offset;
     }
 
-    @JsonProperty("friends_count")
-    public void setFriendsCount(Integer friendsCount) {
-        this.friendsCount = friendsCount;
+    public String getTime_zone() {
+        return time_zone;
     }
 
-    @JsonProperty("listed_count")
-    public Integer getListedCount() {
-        return listedCount;
+    public boolean getGeo_enabled() {
+        return geo_enabled;
     }
 
-    @JsonProperty("listed_count")
-    public void setListedCount(Integer listedCount) {
-        this.listedCount = listedCount;
-    }
-
-    @JsonProperty("created_at")
-    public String getCreatedAt() {
-        return createdAt;
-    }
-
-    @JsonProperty("created_at")
-    public void setCreatedAt(String createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    @JsonProperty("favourites_count")
-    public Integer getFavouritesCount() {
-        return favouritesCount;
-    }
-
-    @JsonProperty("favourites_count")
-    public void setFavouritesCount(Integer favouritesCount) {
-        this.favouritesCount = favouritesCount;
-    }
-
-    @JsonProperty("utc_offset")
-    public Object getUtcOffset() {
-        return utcOffset;
-    }
-
-    @JsonProperty("utc_offset")
-    public void setUtcOffset(Object utcOffset) {
-        this.utcOffset = utcOffset;
-    }
-
-    @JsonProperty("time_zone")
-    public Object getTimeZone() {
-        return timeZone;
-    }
-
-    @JsonProperty("time_zone")
-    public void setTimeZone(Object timeZone) {
-        this.timeZone = timeZone;
-    }
-
-    @JsonProperty("geo_enabled")
-    public Object getGeoEnabled() {
-        return geoEnabled;
-    }
-
-    @JsonProperty("geo_enabled")
-    public void setGeoEnabled(Object geoEnabled) {
-        this.geoEnabled = geoEnabled;
-    }
-
-    @JsonProperty("verified")
-    public Boolean getVerified() {
+    public boolean getVerified() {
         return verified;
     }
 
-    @JsonProperty("verified")
-    public void setVerified(Boolean verified) {
-        this.verified = verified;
+    public float getStatuses_count() {
+        return statuses_count;
     }
 
-    @JsonProperty("statuses_count")
-    public Integer getStatusesCount() {
-        return statusesCount;
-    }
-
-    @JsonProperty("statuses_count")
-    public void setStatusesCount(Integer statusesCount) {
-        this.statusesCount = statusesCount;
-    }
-
-    @JsonProperty("lang")
     public String getLang() {
         return lang;
     }
 
-    @JsonProperty("lang")
+    public boolean getContributors_enabled() {
+        return contributors_enabled;
+    }
+
+    public boolean getIs_translator() {
+        return is_translator;
+    }
+
+    public boolean getIs_translation_enabled() {
+        return is_translation_enabled;
+    }
+
+    public String getProfile_background_color() {
+        return profile_background_color;
+    }
+
+    public String getProfile_background_image_url() {
+        return profile_background_image_url;
+    }
+
+    public String getProfile_background_image_url_https() {
+        return profile_background_image_url_https;
+    }
+
+    public boolean getProfile_background_tile() {
+        return profile_background_tile;
+    }
+
+    public String getProfile_image_url() {
+        return profile_image_url;
+    }
+
+    public String getProfile_image_url_https() {
+        return profile_image_url_https;
+    }
+
+    public String getProfile_link_color() {
+        return profile_link_color;
+    }
+
+    public String getProfile_sidebar_border_color() {
+        return profile_sidebar_border_color;
+    }
+
+    public String getProfile_sidebar_fill_color() {
+        return profile_sidebar_fill_color;
+    }
+
+    public String getProfile_text_color() {
+        return profile_text_color;
+    }
+
+    public boolean getProfile_use_background_image() {
+        return profile_use_background_image;
+    }
+
+    public boolean getHas_extended_profile() {
+        return has_extended_profile;
+    }
+
+    public boolean getDefault_profile() {
+        return default_profile;
+    }
+
+    public boolean getDefault_profile_image() {
+        return default_profile_image;
+    }
+
+    public boolean getFollowing() {
+        return following;
+    }
+
+    public boolean getFollow_request_sent() {
+        return follow_request_sent;
+    }
+
+    public boolean getNotifications() {
+        return notifications;
+    }
+
+    public String getTranslator_type() {
+        return translator_type;
+    }
+
+    // Setter Methods
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setId_str(String id_str) {
+        this.id_str = id_str;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setScreen_name(String screen_name) {
+        this.screen_name = screen_name;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public void setEntities(Entities entitiesObject) {
+        this.EntitiesObject = entitiesObject;
+    }
+
+    public void setProtected(boolean protectedkey) {
+        this.protectedkey=protectedkey;
+    }
+
+    public void setFollowers_count(float followers_count) {
+        this.followers_count = followers_count;
+    }
+
+    public void setFriends_count(float friends_count) {
+        this.friends_count = friends_count;
+    }
+
+    public void setListed_count(float listed_count) {
+        this.listed_count = listed_count;
+    }
+
+    public void setCreated_at(String created_at) {
+        this.created_at = created_at;
+    }
+
+    public void setFavourites_count(float favourites_count) {
+        this.favourites_count = favourites_count;
+    }
+
+    public void setUtc_offset(String utc_offset) {
+        this.utc_offset = utc_offset;
+    }
+
+    public void setTime_zone(String time_zone) {
+        this.time_zone = time_zone;
+    }
+
+    public void setGeo_enabled(boolean geo_enabled) {
+        this.geo_enabled = geo_enabled;
+    }
+
+    public void setVerified(boolean verified) {
+        this.verified = verified;
+    }
+
+    public void setStatuses_count(float statuses_count) {
+        this.statuses_count = statuses_count;
+    }
+
     public void setLang(String lang) {
         this.lang = lang;
     }
 
-    @JsonProperty("contributors_enabled")
-    public Object getContributorsEnabled() {
-        return contributorsEnabled;
+    public void setContributors_enabled(boolean contributors_enabled) {
+        this.contributors_enabled = contributors_enabled;
     }
 
-    @JsonProperty("contributors_enabled")
-    public void setContributorsEnabled(Object contributorsEnabled) {
-        this.contributorsEnabled = contributorsEnabled;
+    public void setIs_translator(boolean is_translator) {
+        this.is_translator = is_translator;
     }
 
-    @JsonProperty("is_translator")
-    public Object getIsTranslator() {
-        return isTranslator;
+    public void setIs_translation_enabled(boolean is_translation_enabled) {
+        this.is_translation_enabled = is_translation_enabled;
     }
 
-    @JsonProperty("is_translator")
-    public void setIsTranslator(Object isTranslator) {
-        this.isTranslator = isTranslator;
+    public void setProfile_background_color(String profile_background_color) {
+        this.profile_background_color = profile_background_color;
     }
 
-    @JsonProperty("is_translation_enabled")
-    public Object getIsTranslationEnabled() {
-        return isTranslationEnabled;
+    public void setProfile_background_image_url(String profile_background_image_url) {
+        this.profile_background_image_url = profile_background_image_url;
     }
 
-    @JsonProperty("is_translation_enabled")
-    public void setIsTranslationEnabled(Object isTranslationEnabled) {
-        this.isTranslationEnabled = isTranslationEnabled;
+    public void setProfile_background_image_url_https(String profile_background_image_url_https) {
+        this.profile_background_image_url_https = profile_background_image_url_https;
     }
 
-    @JsonProperty("profile_background_color")
-    public String getProfileBackgroundColor() {
-        return profileBackgroundColor;
+    public void setProfile_background_tile(boolean profile_background_tile) {
+        this.profile_background_tile = profile_background_tile;
     }
 
-    @JsonProperty("profile_background_color")
-    public void setProfileBackgroundColor(String profileBackgroundColor) {
-        this.profileBackgroundColor = profileBackgroundColor;
+    public void setProfile_image_url(String profile_image_url) {
+        this.profile_image_url = profile_image_url;
     }
 
-    @JsonProperty("profile_background_image_url")
-    public String getProfileBackgroundImageUrl() {
-        return profileBackgroundImageUrl;
+    public void setProfile_image_url_https(String profile_image_url_https) {
+        this.profile_image_url_https = profile_image_url_https;
     }
 
-    @JsonProperty("profile_background_image_url")
-    public void setProfileBackgroundImageUrl(String profileBackgroundImageUrl) {
-        this.profileBackgroundImageUrl = profileBackgroundImageUrl;
+    public void setProfile_link_color(String profile_link_color) {
+        this.profile_link_color = profile_link_color;
     }
 
-    @JsonProperty("profile_background_image_url_https")
-    public String getProfileBackgroundImageUrlHttps() {
-        return profileBackgroundImageUrlHttps;
+    public void setProfile_sidebar_border_color(String profile_sidebar_border_color) {
+        this.profile_sidebar_border_color = profile_sidebar_border_color;
     }
 
-    @JsonProperty("profile_background_image_url_https")
-    public void setProfileBackgroundImageUrlHttps(String profileBackgroundImageUrlHttps) {
-        this.profileBackgroundImageUrlHttps = profileBackgroundImageUrlHttps;
+    public void setProfile_sidebar_fill_color(String profile_sidebar_fill_color) {
+        this.profile_sidebar_fill_color = profile_sidebar_fill_color;
     }
 
-    @JsonProperty("profile_background_tile")
-    public Object getProfileBackgroundTile() {
-        return profileBackgroundTile;
+    public void setProfile_text_color(String profile_text_color) {
+        this.profile_text_color = profile_text_color;
     }
 
-    @JsonProperty("profile_background_tile")
-    public void setProfileBackgroundTile(Object profileBackgroundTile) {
-        this.profileBackgroundTile = profileBackgroundTile;
+    public void setProfile_use_background_image(boolean profile_use_background_image) {
+        this.profile_use_background_image = profile_use_background_image;
     }
 
-    @JsonProperty("profile_image_url")
-    public String getProfileImageUrl() {
-        return profileImageUrl;
+    public void setHas_extended_profile(boolean has_extended_profile) {
+        this.has_extended_profile = has_extended_profile;
     }
 
-    @JsonProperty("profile_image_url")
-    public void setProfileImageUrl(String profileImageUrl) {
-        this.profileImageUrl = profileImageUrl;
+    public void setDefault_profile(boolean default_profile) {
+        this.default_profile = default_profile;
     }
 
-    @JsonProperty("profile_image_url_https")
-    public String getProfileImageUrlHttps() {
-        return profileImageUrlHttps;
+    public void setDefault_profile_image(boolean default_profile_image) {
+        this.default_profile_image = default_profile_image;
     }
 
-    @JsonProperty("profile_image_url_https")
-    public void setProfileImageUrlHttps(String profileImageUrlHttps) {
-        this.profileImageUrlHttps = profileImageUrlHttps;
-    }
-
-    @JsonProperty("profile_banner_url")
-    public String getProfileBannerUrl() {
-        return profileBannerUrl;
-    }
-
-    @JsonProperty("profile_banner_url")
-    public void setProfileBannerUrl(String profileBannerUrl) {
-        this.profileBannerUrl = profileBannerUrl;
-    }
-
-    @JsonProperty("profile_link_color")
-    public String getProfileLinkColor() {
-        return profileLinkColor;
-    }
-
-    @JsonProperty("profile_link_color")
-    public void setProfileLinkColor(String profileLinkColor) {
-        this.profileLinkColor = profileLinkColor;
-    }
-
-    @JsonProperty("profile_sidebar_border_color")
-    public String getProfileSidebarBorderColor() {
-        return profileSidebarBorderColor;
-    }
-
-    @JsonProperty("profile_sidebar_border_color")
-    public void setProfileSidebarBorderColor(String profileSidebarBorderColor) {
-        this.profileSidebarBorderColor = profileSidebarBorderColor;
-    }
-
-    @JsonProperty("profile_sidebar_fill_color")
-    public String getProfileSidebarFillColor() {
-        return profileSidebarFillColor;
-    }
-
-    @JsonProperty("profile_sidebar_fill_color")
-    public void setProfileSidebarFillColor(String profileSidebarFillColor) {
-        this.profileSidebarFillColor = profileSidebarFillColor;
-    }
-
-    @JsonProperty("profile_text_color")
-    public String getProfileTextColor() {
-        return profileTextColor;
-    }
-
-    @JsonProperty("profile_text_color")
-    public void setProfileTextColor(String profileTextColor) {
-        this.profileTextColor = profileTextColor;
-    }
-
-    @JsonProperty("profile_use_background_image")
-    public Object getProfileUseBackgroundImage() {
-        return profileUseBackgroundImage;
-    }
-
-    @JsonProperty("profile_use_background_image")
-    public void setProfileUseBackgroundImage(Object profileUseBackgroundImage) {
-        this.profileUseBackgroundImage = profileUseBackgroundImage;
-    }
-
-    @JsonProperty("has_extended_profile")
-    public Object getHasExtendedProfile() {
-        return hasExtendedProfile;
-    }
-
-    @JsonProperty("has_extended_profile")
-    public void setHasExtendedProfile(Object hasExtendedProfile) {
-        this.hasExtendedProfile = hasExtendedProfile;
-    }
-
-    @JsonProperty("default_profile")
-    public Boolean getDefaultProfile() {
-        return defaultProfile;
-    }
-
-    @JsonProperty("default_profile")
-    public void setDefaultProfile(Boolean defaultProfile) {
-        this.defaultProfile = defaultProfile;
-    }
-
-    @JsonProperty("default_profile_image")
-    public Boolean getDefaultProfileImage() {
-        return defaultProfileImage;
-    }
-
-    @JsonProperty("default_profile_image")
-    public void setDefaultProfileImage(Boolean defaultProfileImage) {
-        this.defaultProfileImage = defaultProfileImage;
-    }
-
-    @JsonProperty("following")
-    public Object getFollowing() {
-        return following;
-    }
-
-    @JsonProperty("following")
-    public void setFollowing(Object following) {
+    public void setFollowing(boolean following) {
         this.following = following;
     }
 
-    @JsonProperty("follow_request_sent")
-    public Object getFollowRequestSent() {
-        return followRequestSent;
+    public void setFollow_request_sent(boolean follow_request_sent) {
+        this.follow_request_sent = follow_request_sent;
     }
 
-    @JsonProperty("follow_request_sent")
-    public void setFollowRequestSent(Object followRequestSent) {
-        this.followRequestSent = followRequestSent;
-    }
-
-    @JsonProperty("notifications")
-    public Object getNotifications() {
-        return notifications;
-    }
-
-    @JsonProperty("notifications")
-    public void setNotifications(Object notifications) {
+    public void setNotifications(boolean notifications) {
         this.notifications = notifications;
     }
 
-    @JsonProperty("translator_type")
-    public String getTranslatorType() {
-        return translatorType;
+    public void setTranslator_type(String translator_type) {
+        this.translator_type = translator_type;
     }
-
-    @JsonProperty("translator_type")
-    public void setTranslatorType(String translatorType) {
-        this.translatorType = translatorType;
-    }
-
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
 }

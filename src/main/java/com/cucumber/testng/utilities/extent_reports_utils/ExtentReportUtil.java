@@ -1,6 +1,6 @@
 package com.cucumber.testng.utilities.extent_reports_utils;
 
-import cucumber.api.Scenario;
+import io.cucumber.core.api.Scenario;
 
 import java.io.File;
 

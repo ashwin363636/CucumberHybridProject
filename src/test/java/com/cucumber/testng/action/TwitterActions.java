@@ -1,23 +1,20 @@
 package com.cucumber.testng.action;
 
-import com.cucumber.testng.model.CreateTwiteResponse;
-import com.cucumber.testng.model.GetAllTwitesResponse;
+import com.cucumber.testng.model.Twite;
 import com.cucumber.testng.page_objects.api.TwitterPage;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 
-import java.lang.reflect.Type;
 import java.util.Collection;
+import java.util.List;
 
 import static com.cucumber.testng.application_utils.api_utils.APIUtils.UNRELIABLE_INTEGER_FACTORY;
 
 public class TwitterActions {
 
     private TwitterPage twitterPage;
-    private RequestSpecification requestSpecification;
     private Response response;
     private Gson gson;
 
@@ -29,18 +26,31 @@ public class TwitterActions {
     }
 
     public void launchTwitter() {
-        requestSpecification = twitterPage.login();
+        twitterPage.login();
     }
 
-    public CreateTwiteResponse twite(String twite) {
-        response = twitterPage.twiteThisStatus(requestSpecification, twite);
-        return gson.fromJson(response.asString(), CreateTwiteResponse.class);
+    public Twite twite(String twite) {
+        return getTwiteFromResponses(twitterPage.twiteThisStatus(twite));
     }
 
-    public Collection<GetAllTwitesResponse> getAllTwitesFromMyScreen(String screenName, int count) {
-        response = twitterPage.getAllTwites(requestSpecification, screenName, count);
-        Type collectionType = new TypeToken<Collection<GetAllTwitesResponse>>(){}.getType();
-        Collection<GetAllTwitesResponse> list = gson.fromJson(response.asString(), collectionType);
-        return list;
+    public List<Twite> getAllTwitesFromMyScreen(String screenName, int count) {
+        return getListOfTwitesFromResponses(twitterPage.getAllTwites(screenName, count));
+    }
+
+    public Twite likeTheLastTwite(long twiteID) {
+        return getTwiteFromResponses(twitterPage.likeTwite(twiteID));
+    }
+
+    public Twite unlikeMyLastTwite(long twiteID) {
+        return getTwiteFromResponses(twitterPage.unlike(twiteID));
+    }
+
+    private List<Twite> getListOfTwitesFromResponses(Response response) {
+        return gson.fromJson(response.asString(), new TypeToken<Collection<Twite>>() {
+        }.getType());
+    }
+
+    private Twite getTwiteFromResponses(Response response) {
+        return gson.fromJson(response.asString(), Twite.class);
     }
 }

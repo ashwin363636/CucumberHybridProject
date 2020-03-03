@@ -49,13 +49,6 @@
             <artifactId>cucumber-testng</artifactId>
             <version>4.8.0</version>
         </dependency>
-<!--        &lt;!&ndash; Cucumber &ndash;&gt;-->
-<!--        &lt;!&ndash;Selenium Webdriver &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.seleniumhq.selenium</groupId>-->
-<!--            <artifactId>selenium-java</artifactId>-->
-<!--            <version>4.0.0-alpha-4</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
@@ -131,7 +124,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.7</version>
+            <version>3.9</version>
         </dependency>
     </dependencies>
 </project>

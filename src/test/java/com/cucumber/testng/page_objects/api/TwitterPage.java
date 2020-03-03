@@ -20,21 +20,39 @@ public class TwitterPage {
         return givenConfig();
     }
 
-    public Response twiteThisStatus(RequestSpecification requestSpecification, String twite) {
-        return requestSpecification
+    public Response twiteThisStatus(String twite) {
+        return givenConfig()
                 .queryParam("status", twite)
                 .when()
-                .post("/update.json")
+                .post("/statuses/update.json")
                 .then()
                 .extract().response();
     }
 
-    public Response getAllTwites(RequestSpecification requestSpecification, String screenName, int count) {
-        return requestSpecification
+    public Response getAllTwites(String screenName, int count) {
+        return givenConfig()
                 .queryParam("screen_name", screenName)
                 .queryParam("count", count)
                 .when()
-                .get("/home_timeline.json")
+                .get("/statuses/home_timeline.json")
+                .then()
+                .extract().response();
+    }
+
+    public Response likeTwite(long twiteID) {
+        return givenConfig()
+                .queryParam("id", twiteID)
+                .when()
+                .post("/favorites/create.json")
+                .then()
+                .extract().response();
+    }
+
+    public Response unlike(long twiteID) {
+        return givenConfig()
+                .queryParam("id", twiteID)
+                .when()
+                .post("/favorites/destroy.json")
                 .then()
                 .extract().response();
     }

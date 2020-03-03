@@ -6,6 +6,9 @@ import com.cucumber.testng.model.LoginCredentials;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.io.IOException;
+
 import static org.testng.Assert.assertTrue;
 
 public class LoginStepDef {
@@ -20,7 +23,7 @@ public class LoginStepDef {
     }
 
     @Given("^Open Application and Enter url$")
-    public void open_Application_and_Enter_url() {
+    public void open_Application_and_Enter_url() throws IOException {
         System.out.println("Calling Login Action to launch  the application");
         loginActions.launchApplication();
     }

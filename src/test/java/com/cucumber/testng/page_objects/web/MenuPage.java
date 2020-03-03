@@ -1,12 +1,13 @@
 package com.cucumber.testng.page_objects.web;
 
+import com.cucumber.testng.page_objects.UIBasePage;
 import org.openqa.selenium.By;
 
-import static com.cucumber.testng.application_utils.web_utils.WebObjects.*;
+import static com.cucumber.testng.application_utils.ui.UIObjects.*;
 import static com.cucumber.testng.project_constants.enams.Frame.MENU;
 import static com.cucumber.testng.utilities.extent_reports_utils.ExtentReportUtil.log;
 
-public class MenuPage extends WebBasePage {
+public class MenuPage extends UIBasePage {
 
     private By LOGOUT_LINK = By.xpath("//*[@id='logout-link']");
     private By BOX_MGMT_LINK = By.xpath("//a[contains(text(),'Box Mgmt')]");

@@ -9,8 +9,8 @@ Feature: Testing the login feature
 
     Examples:
       | Username | Password  |
-      | system1   | QwertY123   |
-      | system  | M00nb0y |
+      | system1  | QwertY123 |
+      | system   | M00nb0y   |
 
   Scenario Outline: Web Second Test
     Given Open Application and Enter url

@@ -1,33 +1,19 @@
 package com.cucumber.testng.page_objects.mobile;
 
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.remote.MobileCapabilityType;
+import com.cucumber.testng.page_objects.UIBasePage;
+import io.appium.java_client.MobileBy;
 import org.openqa.selenium.By;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
+import static com.cucumber.testng.application_utils.ui.mobile_utils.MobileObjects.click;
+import static com.cucumber.testng.application_utils.ui.mobile_utils.MobileObjects.input;
 
-public class MobilePage extends MobileBasePage{
+public class MobilePage extends UIBasePage {
 
-    public void testMolile() throws MalformedURLException {
-        AndroidDriver<AndroidElement> driver1=capabilities();
-        driver1.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver1.findElementById("com.androidsample.generalstore:id/nameField").sendKeys("Hello");
-        driver1.findElementById("com.androidsample.generalstore:id/btnLetsShop").click();
-    }
+    private static final By NAME_FIELD_INPUT = MobileBy.xpath("//*[@resource-id='com.androidsample.generalstore:id/nameField']");
+    private static final By SUBMIT_BTN = MobileBy.id("com.androidsample.generalstore:id/btnLetsShop");
 
-    public static  AndroidDriver<AndroidElement> capabilities() throws MalformedURLException {
-        AndroidDriver<AndroidElement> driver;
-        File appDir = new File("src/test/resources/apks");
-        File app = new File(appDir, "General-Store.apk");
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "emulator-5554");
-        capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-        driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-        return driver;
+    public void testMobile() {
+        input(NAME_FIELD_INPUT, "Hello");
+        click(SUBMIT_BTN);
     }
 }

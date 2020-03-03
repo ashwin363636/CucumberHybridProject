@@ -33,7 +33,8 @@ public class ConfigReader {
         //Historical Report
         Settings.HistoricalReport = p.getProperty("HistoricalReport");
         //Application URL
-        Settings.AUT = p.getProperty("AUT");
+        Settings.IMX_URL = p.getProperty("IMX_URL");
+        Settings.ZB_URL = p.getProperty("ZB_URL");
 
         //API constants
         Settings.TwitterBaseURI = p.getProperty("TwitterBaseURI");

@@ -1,12 +1,13 @@
 package com.cucumber.testng.page_objects.web;
 
 import com.cucumber.testng.model.LoginCredentials;
+import com.cucumber.testng.page_objects.UIBasePage;
 import org.openqa.selenium.By;
 
-import static com.cucumber.testng.application_utils.web_utils.WebObjects.click;
-import static com.cucumber.testng.application_utils.web_utils.WebObjects.input;
+import static com.cucumber.testng.application_utils.ui.UIObjects.click;
+import static com.cucumber.testng.application_utils.ui.UIObjects.input;
 
-public class LoginPage extends WebBasePage {
+public class LoginPage extends UIBasePage {
 
     private By USERNAME_INPUT = By.xpath("//*[@id='j_username']");
     private By PASSWORD_INPUT = By.xpath("//*[@id='j_password']");

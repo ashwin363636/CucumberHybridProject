@@ -1,12 +1,13 @@
 package com.cucumber.testng.page_objects.web;
 
+import com.cucumber.testng.page_objects.UIBasePage;
 import org.openqa.selenium.By;
 
-import static com.cucumber.testng.application_utils.web_utils.WebObjects.*;
+import static com.cucumber.testng.application_utils.ui.UIObjects.*;
 import static com.cucumber.testng.project_constants.enams.Frame.MAIN;
 import static org.testng.Assert.assertEquals;
 
-public class BoxPage extends WebBasePage {
+public class BoxPage extends UIBasePage {
     private String boxName;
     private By CREATE_NEW_BOX_LINK = By.xpath("//a[@id='create-new-box']");
     private static final String BOX_POP_UP = "//div[@id='box-dialog']";

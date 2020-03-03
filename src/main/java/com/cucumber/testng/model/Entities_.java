@@ -10,48 +10,19 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonPropertyOrder({
-    "url",
-    "description"
-})
 public class Entities_ {
+    Description DescriptionObject;
 
-    @JsonProperty("url")
-    private Url url;
-    @JsonProperty("description")
-    private Description description;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("url")
-    public Url getUrl() {
-        return url;
-    }
+    // Getter Methods
 
-    @JsonProperty("url")
-    public void setUrl(Url url) {
-        this.url = url;
-    }
-
-    @JsonProperty("description")
     public Description getDescription() {
-        return description;
+        return DescriptionObject;
     }
 
-    @JsonProperty("description")
-    public void setDescription(Description description) {
-        this.description = description;
-    }
+    // Setter Methods
 
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
+    public void setDescription(Description descriptionObject) {
+        this.DescriptionObject = descriptionObject;
     }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
 }

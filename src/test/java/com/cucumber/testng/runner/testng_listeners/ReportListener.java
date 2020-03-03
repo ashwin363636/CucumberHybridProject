@@ -7,8 +7,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import static com.cucumber.testng.page_objects.web.WebBasePage.getDriver;
-import static com.cucumber.testng.utilities.extent_reports_utils.ExtentReportUtil.getScenarios;
+import static com.cucumber.testng.page_objects.UIBasePage.getDriver;
 import static com.cucumber.testng.utilities.extent_reports_utils.ExtentReportUtil.log;
 
 public class ReportListener implements ITestListener {
@@ -27,7 +26,6 @@ public class ReportListener implements ITestListener {
         try {
             if (getDriver() != null) {
                 embedScreenshot();
-                getScenarios().write("URL: " + getDriver().getCurrentUrl());
             }
         } catch (WebDriverException exception) {
             exception.printStackTrace();
@@ -41,7 +39,7 @@ public class ReportListener implements ITestListener {
 
     @Override
     public synchronized void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-        System.out.println(" Test Percentage");
+        System.out.println("Test Percentage");
     }
 
     @Override
