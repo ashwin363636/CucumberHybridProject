@@ -59,7 +59,7 @@ public class MobileUtils {
         String[] aCommand = new String[]{emulatorPath, "-avd", nameOfAVD};
         try {
             Process process = new ProcessBuilder(aCommand).start();
-            process.waitFor(25, TimeUnit.SECONDS);
+            process.waitFor(30, TimeUnit.SECONDS);
             System.out.println("Emulator launched successfully!");
         } catch (Exception e) {
             e.printStackTrace();

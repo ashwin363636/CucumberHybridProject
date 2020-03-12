@@ -1,9 +1,11 @@
 package com.cucumber.testng.page_objects;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.util.concurrent.TimeUnit;
+
+import static com.cucumber.testng.application_utils.ui.web_utils.WebDriverFactory.IMPLICITLY_WAIT;
 
 public class UIBasePage {
 
@@ -14,8 +16,9 @@ public class UIBasePage {
     }
 
     public static synchronized RemoteWebDriver getDriver() {
+        drivers.get().manage().timeouts().implicitlyWait(IMPLICITLY_WAIT, TimeUnit.SECONDS);
         if (isMobileDriver()) {
-            return ((AppiumDriver<WebElement>) drivers.get());
+            return ((AndroidDriver) drivers.get());
         } else
             return drivers.get();
 
@@ -27,5 +30,14 @@ public class UIBasePage {
         } else {
             return false;
         }
+    }
+
+    public static AndroidDriver getAndroidDriver() {
+        return (AndroidDriver) getDriver();
+    }
+
+    /*Method to get Class from a String value*/
+    public Object getClassOf(String pattern) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+        return Class.forName(pattern).newInstance();
     }
 }

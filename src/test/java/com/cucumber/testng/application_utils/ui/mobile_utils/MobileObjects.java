@@ -1,22 +1,21 @@
 package com.cucumber.testng.application_utils.ui.mobile_utils;
 
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.MultiTouchAction;
-import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 import static com.cucumber.testng.application_utils.ui.UIObjects.sleep;
 import static com.cucumber.testng.application_utils.ui.UIObjects.waitForPageToLoad;
+import static com.cucumber.testng.page_objects.UIBasePage.getAndroidDriver;
 import static com.cucumber.testng.page_objects.UIBasePage.getDriver;
 import static com.cucumber.testng.utilities.misc_utils.AssertClass.assertFail;
+import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 import static io.appium.java_client.touch.TapOptions.tapOptions;
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
@@ -34,7 +33,7 @@ public class MobileObjects {
         waitForPageToLoad();
         WebDriverWait wait = new WebDriverWait(getDriver(), DEFAULT_WAIT_SECONDS);
         try {
-            return wait.until(ExpectedConditions.elementToBeClickable(getDriver().findElement(elementLocator)));
+            return wait.until(ExpectedConditions.elementToBeClickable(getAndroidDriver().findElement(elementLocator)));
         } catch (StaleElementReferenceException se) {
             sleep(500);
             return getElement(elementLocator);
@@ -46,10 +45,10 @@ public class MobileObjects {
         }
     }
 
-    public static List<WebElement> getElements(String elementLocator) {
+    public static List<WebElement> getElements(By elementLocator) {
         WebDriverWait wait = new WebDriverWait(getDriver(), DEFAULT_WAIT_SECONDS);
         try {
-            return wait.until(ExpectedConditions.visibilityOfAllElements(getDriver().findElementByXPath(elementLocator)));
+            return wait.until(ExpectedConditions.visibilityOfAllElements(getAndroidDriver().findElement(elementLocator)));
         } catch (StaleElementReferenceException se) {
             sleep(500);
             return getElements(elementLocator);
@@ -78,12 +77,8 @@ public class MobileObjects {
     }
 
     public static void hideKeyboard() {
-        getDriver().navigate().back();
-    }
-
-    public static void showKeyboard() {
-        if (!((AndroidDriver<MobileElement>) getDriver()).isKeyboardShown()) {
-            ((AndroidDriver<MobileElement>) getDriver()).getKeyboard();
+        if (!(getAndroidDriver()).isKeyboardShown()) {
+            (getAndroidDriver()).hideKeyboard();
         }
     }
 
@@ -92,37 +87,36 @@ public class MobileObjects {
     }
 
     public static void waitforElementTobevisible(String elementLocator) {
-        WebDriverWait wait = new WebDriverWait(getDriver(), DEFAULT_WAIT_SECONDS);
+        WebDriverWait wait = new WebDriverWait(getAndroidDriver(), DEFAULT_WAIT_SECONDS);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(elementLocator)));
     }
 
     /****************Android UIAutomator functions*****************/
 
-    public static void scrollToText(By elementLocator, String text) {
-        click(elementLocator);
-        ((AndroidDriver<AndroidElement>) getDriver()).findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + text + "\"));");
+    public static void scrollToText(String text) {
+        getAndroidDriver().findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + text + "\"));");
     }
 
-
     /**************Touch Action Methods*****************************/
+
     //Tap to an element
-    public static void tapByElement(String elementLocator) {
-        new TouchAction((PerformsTouchActions) getDriver())
-                .tap(tapOptions().withElement(element(getDriver().findElementByXPath(elementLocator))))
+    public static void tapByElement(By elementLocator) {
+        new TouchAction(getAndroidDriver())
+                .tap(tapOptions().withElement(element(getElement(elementLocator))))
                 .waitAction(waitOptions(Duration.ofMillis(TAP_DURATION))).perform();
     }
 
     //Tap by coordinates
     public static void tapByCoordinates(int x, int y) {
-        new TouchAction((PerformsTouchActions) getDriver())
+        new TouchAction(getAndroidDriver())
                 .tap(point(x, y))
                 .waitAction(waitOptions(Duration.ofMillis(TAP_DURATION))).perform();
     }
 
     //Press by element
-    public static void pressByElement(String elementLocator, long seconds) {
-        new TouchAction((PerformsTouchActions) getDriver())
-                .press(element(getDriver().findElementByXPath(elementLocator)))
+    public static void pressByElement(By elementLocator, long seconds) {
+        new TouchAction(getAndroidDriver())
+                .press(element(getElement(elementLocator)))
                 .waitAction(waitOptions(ofSeconds(seconds)))
                 .release()
                 .perform();
@@ -130,25 +124,37 @@ public class MobileObjects {
 
     //Press by coordinates
     public static void pressByCoordinates(int x, int y, long seconds) {
-        new TouchAction((PerformsTouchActions) getDriver())
+        new TouchAction(getAndroidDriver())
                 .press(point(x, y))
                 .waitAction(waitOptions(ofSeconds(seconds)))
                 .release()
                 .perform();
     }
 
-    public static void dragAndDrop(String elementSource, String elementTarget) {
+    //Tap - long press - move to destination - release
+    public static void dragAndMoveTo(By elementSource, By elementTarget) {
+        TouchAction tap = new TouchAction(getAndroidDriver());
+        WebElement source = getElement(elementSource);
+        WebElement destination = getElement(elementTarget);
+        tap.longPress(longPressOptions().withElement(element(source)).withDuration(ofSeconds(2))).moveTo(element(destination)).release().perform();
+    }
 
+    //Drag and drop function
+    public static void dragAndDropTo(By elementSource, By elementTarget) {
+        TouchAction tap = new TouchAction(getAndroidDriver());
+        WebElement source = getElement(elementSource);
+        WebElement destination = getElement(elementTarget);
+        tap.longPress(element(source)).moveTo(element(destination)).release().perform();
     }
 
     //Horizontal Swipe by percentages
     public static void horizontalSwipeByPercentage(double startPercentage, double endPercentage, double anchorPercentage) {
-        Dimension size = getDriver().manage().window().getSize();
+        Dimension size = getAndroidDriver().manage().window().getSize();
         int anchor = (int) (size.height * anchorPercentage);
         int startPoint = (int) (size.width * startPercentage);
         int endPoint = (int) (size.width * endPercentage);
 
-        new TouchAction((PerformsTouchActions) getDriver())
+        new TouchAction(getAndroidDriver())
                 .press(point(startPoint, anchor))
                 .waitAction(waitOptions(ofMillis(TAP_DURATION * 4)))
                 .moveTo(point(endPoint, anchor))
@@ -157,12 +163,12 @@ public class MobileObjects {
 
     //Vertical Swipe by percentages
     public static void verticalSwipeByPercentages(double startPercentage, double endPercentage, double anchorPercentage) {
-        Dimension size = getDriver().manage().window().getSize();
+        Dimension size = getAndroidDriver().manage().window().getSize();
         int anchor = (int) (size.width * anchorPercentage);
         int startPoint = (int) (size.height * startPercentage);
         int endPoint = (int) (size.height * endPercentage);
 
-        new TouchAction((PerformsTouchActions) getDriver())
+        new TouchAction(getAndroidDriver())
                 .press(point(anchor, startPoint))
                 .waitAction(waitOptions(ofMillis(TAP_DURATION * 4)))
                 .moveTo(point(anchor, endPoint))
@@ -170,16 +176,16 @@ public class MobileObjects {
     }
 
     //Swipe by elements
-    public static void swipeByElements(String startElementLocator, String endElementLocator) {
-        AndroidElement startElement = (AndroidElement) getDriver().findElementByXPath(startElementLocator);
-        AndroidElement endElement = (AndroidElement) getDriver().findElementByXPath(endElementLocator);
+    public static void swipeByElements(By startElementLocator, By endElementLocator) {
+        WebElement startElement = getElement(startElementLocator);
+        WebElement endElement = getElement(endElementLocator);
         int startX = startElement.getLocation().getX() + (startElement.getSize().getWidth() / 2);
         int startY = startElement.getLocation().getY() + (startElement.getSize().getHeight() / 2);
 
         int endX = endElement.getLocation().getX() + (endElement.getSize().getWidth() / 2);
         int endY = endElement.getLocation().getY() + (endElement.getSize().getHeight() / 2);
 
-        new TouchAction((PerformsTouchActions) getDriver())
+        new TouchAction(getAndroidDriver())
                 .press(point(startX, startY))
                 .waitAction(waitOptions(ofMillis(1000)))
                 .moveTo(point(endX, endY))
@@ -187,14 +193,27 @@ public class MobileObjects {
     }
 
     //Multitouch action by using an android element
-    public static void multiTouchByElement(String elementLocator) {
-        TouchAction press = new TouchAction((PerformsTouchActions) getDriver())
-                .press(element(getDriver().findElementByXPath(elementLocator)))
+    public static void multiTouchByElement(By elementLocator) {
+        TouchAction press = new TouchAction(getAndroidDriver())
+                .press(element(getElement(elementLocator)))
                 .waitAction(waitOptions(ofSeconds(1)))
                 .release();
 
-        new MultiTouchAction((PerformsTouchActions) getDriver())
+        new MultiTouchAction(getAndroidDriver())
                 .add(press)
                 .perform();
+    }
+
+    /**************Switching Mods ****************************/
+
+    public static void switchToWebView() {
+        sleep(5000);
+        Set<String> contexts = getAndroidDriver().getContextHandles();
+        getAndroidDriver().context("WEBVIEW_com.androidsample.generalstore");
+    }
+
+    public static void switchToMobileView() {
+        Set<String> contexts = getAndroidDriver().getContextHandles();
+        getAndroidDriver().context("NATIVE_APP");
     }
 }

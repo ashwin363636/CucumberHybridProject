@@ -7,10 +7,10 @@ creating automated test scripts for GUI, Mobile and API level tests across proje
 This is a reusable automation framework that blends together Selenium WebDriver, Appium, Android Driver, Rest Assured, SauceLabs and Cucumber JVM (incorporating Gherkin and the BDD 'Given, When Then' testing construct)   
 
 This framework supports automation of : - 
-*Web Browsers (Chrome, But can be easily scalled to use other commonly used browsers)  
-*Web Browser Responsive Design with view ports configuration  --todo
-*Mobile Automation on Emulated and Physical Devices, for Native, Hybrid, and Web App  
-*Mobile Automation on Cloud using SauceLabs
+* Web Browsers (Chrome, But can be easily scalled to use other commonly used browsers)  
+* Web Browser Responsive Design with view ports configuration  --todo
+* Mobile Automation on Emulated and Physical Devices, for Native, Hybrid, and Web App  
+* Mobile Automation on Cloud using SauceLabs
   
 
 The framework incorporates design principle of BDD (Behaviour driven development) which promotes
@@ -27,27 +27,28 @@ Tools & libraries
 =================
 The test automation framework is comprised of following tools and libraries  
 
-*Cucumber-JVM:- BDD Framework  
-*Custom Page Object Pattern and utility functions  
-*Selenium WebDriver: - Browser automation framework
-*Rest-Assured: - Restful Api framework   
-*Android Driver: - Android Mobile Automation  
-*Appium: - Mobile Native app, Hybrid App, Web app  
-*Selenium Grid: - Distribute test Execution across several machines 
-*SauceLabs: - Cloud Based testing of mobile and Web Apps  
-*JAVA: - Programming language  
-*TestNg: - TestNg Java testing framework  
-*Maven: - Build tool  
-*Jenkins: - Continuous Integration  
-*PicoContainer: - Standard Dependency Injection     
-*Git: - Version Control  
-*Github or Local Git Server: - Git repository hosted server  
-*Intellij Or Eclipse: - Integrated Development Environment  
-*Hamcrest library: - Assertion for tests 
-*Extent Reports 4.0: - Logging and Test Reporting  
-*DbUtils Mysql (optional): - Java Database utility api (Easily Integrable)     
-*PhantomJsDriver, GhostDriver (optional): - Full web stack No browser required supporting headless testing (Easily Integrable)
-*AutoIt (optional): - To interact with windows based components (Easily Integrable)  
+* Cucumber-JVM:- BDD Framework  
+* Custom Page Object Pattern and utility functions  
+* Selenium WebDriver: - Browser automation framework
+* Rest-Assured: - Restful Api framework   
+* Android Driver: - Android Mobile Automation  
+* Appium: - Mobile Native app, Hybrid App, Web app  
+* Selenium Grid: - Distribute test Execution across several machines 
+* SauceLabs: - Cloud Based testing of mobile and Web Apps  
+* JAVA: - Programming language  
+* TestNg: - TestNg Java testing framework  
+* Maven: - Build tool  
+* Jenkins: - Continuous Integration  
+* PicoContainer: - Standard Dependency Injection     
+* Git: - Version Control  
+* Github or Local Git Server: - Git repository hosted server  
+* Intellij Or Eclipse: - Integrated Development Environment  
+* Hamcrest library: - Assertion for tests 
+* Extent Reports 4.0: - Logging and Test Reporting  
+* DbUtils Mysql (optional): - Java Database utility api (Easily Integrable)     
+* PhantomJsDriver, GhostDriver (optional): - Full web stack No browser required supporting headless testing (Easily Integrable)
+* AutoIt (optional): - To interact with windows based components (Easily Integrable)  
+* Zalenium : Using Docker to build a testing infrastructure for web UI and mobile
 
 Test Automation framework support
 ------------------------------------------
@@ -309,14 +310,11 @@ Step Definitions
  public class LoginActions {
      private LoginPage loginPage;
      private MenuPage menupage;
-     private BoxActions boxActions;
-     private BoxPage boxPage;
- 
-     public LoginActions(LoginPage loginPage, MenuPage menupage, BoxActions boxActions, BoxPage boxPage){
+  
+     public LoginActions(LoginPage loginPage, MenuPage menupage){
          this.loginPage = loginPage;
          this.menupage = menupage;
-         this.boxActions = boxActions;
-         this.boxPage = boxPage;
+   
      }
  
      public void launchApplication(){
@@ -354,6 +352,10 @@ plugin: html, json, Extent report and rerun reports are created. if a TesSuite i
 
 Other ways to run the tests or Test Suite
 ---------------------------------------------
-*command line using Maven:-  mvn clean test -Dmaven.surefire.debug -DMode=Debug 
+*command line using Maven:- mvn clean test -Dmaven.surefire.debug -DMode=debug -Dview=iphone -Dzalenium=false
+Mode- Enables the Debug/Normal mode of test execution
+View- Enables a certain viewport for the browser to execute test
+Zalenium- executes test in Zalenium grid network
+ 
   
 

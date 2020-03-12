@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6200a67d-c8b7-481d-8953-a27a01d92486" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cucumber/testng/drivers/web/chromedriver_74.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/action/ZeroBankAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/zb_pages/MenuBarPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/zb_pages/PayBillsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/zb_pages/PaySavedPayeePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/zb_pages/TransferFundsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/zb_pages/ZBBasePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/zb_pages/ZBLoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/step_definition/ZeroBankStepDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cucumber/testng/configs/project_configs/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cucumber/testng/configs/project_configs/ConfigReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cucumber/testng/configs/project_configs/GlobalConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cucumber/testng/configs/project_configs/GlobalConfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cucumber/testng/project_constants/constants/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cucumber/testng/project_constants/constants/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/action/BoxActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/action/BoxActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/action/LoginActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/action/LoginActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/action/MobileActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/action/MobileActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/application_utils/ui/UIObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/application_utils/ui/UIObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/application_utils/ui/mobile_utils/MobileDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/application_utils/ui/mobile_utils/MobileDriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/application_utils/ui/mobile_utils/MobileObjects.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/application_utils/ui/mobile_utils/MobileObjects.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/application_utils/ui/mobile_utils/MobileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/application_utils/ui/mobile_utils/MobileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/application_utils/ui/web_utils/WebApplicationLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/application_utils/ui/web_utils/WebApplicationLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/application_utils/ui/web_utils/WebDriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/application_utils/ui/web_utils/WebDriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/UIBasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/UIBasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/BoxPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/ifmdx/BoxPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/ifmdx/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/MenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/ifmdx/MenuPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/ZBLandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/zb_pages/ZBLandingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/step_definition/BoxStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/step_definition/BoxStepDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/step_definition/LoginStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/step_definition/LoginStepDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/step_definition/MobileStepDef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cucumber/testng/step_definition/MobileStepDef.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/extent-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/extent-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/mobile_features/mobile_feature_2/HybridTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/mobile_features/mobile_feature_2/HybridTest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/mobile_features/mobile_feature_2/WebTest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/mobile_features/mobile_feature_2/WebTest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/web_features/web_feature_1/Web1.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/web_features/web_feature_1/Web1.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/web_features/web_features_2/Web2.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/web_features/web_features_2/Web2.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/web_features/web_features_2/Web3.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/web_features/web_features_2/Web3.feature" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Cucumber_TestNG_Extent_Project - API\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1V3pqp5NqJ3M3SfwpYPKzHFh5Wr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowLog Viewer.ShowToolbar" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Version_4_CPF_TESTING" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.cucumber.testng.action" />
+      <recent name="com.cucumber.testng.page_objects.web" />
+      <recent name="com.cucumber.testng.page_objects.mobile" />
+      <recent name="com.cucumber.testng.model" />
+      <recent name="com.cucumber.testng.runner" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.cucumber.testng" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Cucumber_TestNG_Extent_Project\src\main\java\com\cucumber\testng\configs\web_profile" />
+      <recent name="C:\Cucumber_TestNG_Extent_Project\src\main\java\com\cucumber\testng\drivers\web" />
+      <recent name="C:\Cucumber_TestNG_Extent_Project\src\test\java\com\cucumber\testng\application_utils\ui\mobile_utils" />
+      <recent name="C:\Cucumber_TestNG_Extent_Project\src\test\java\com\cucumber\testng\application_utils\mobile_utils" />
+      <recent name="C:\Cucumber_TestNG_Extent_Project\src\main\java\com\cucumber\testng\utilities\date_utils" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cucumber.testng.application_utils.ui.mobile_utils" />
+      <recent name="com.cucumber.testng.runner" />
+      <recent name="com.cucumber.testng.runner.testng_listeners" />
+      <recent name="com.cucumber.testng.project_constants.enams" />
+      <recent name="com.cucumber.testng.configs.browser_configs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Cucumber_TestNG_Extent_Project\src\main\java\com\cucumber\testng\drivers\web" />
+      <recent name="C:\Cucumber_TestNG_Extent_Project\src\main\java\com\cucumber\testng\model" />
+      <recent name="C:\Cucumber_TestNG_Extent_Project\src\test\resources\apks" />
+      <recent name="C:\Cucumber_TestNG_Extent_Project\src\test\resources\features\api_features\api_features_2" />
+      <recent name="C:\Cucumber_TestNG_Extent_Project\src\test\resources\features\api_features\api_feature_1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Remote.Runner">
+    <configuration name="Feature: Login" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="C:\Cucumber_TestNG_Extent_Project\src\test\resources\features\mobile_features\mobile_feature_2\WebTest.feature" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="Cucumber_TestNG_Extent_Project" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome" />
+      <option name="SUGGESTED_NAME" value="Feature: Login" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: Mobile3" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4.5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/mobile_features/mobile_feature_2/Mobile3.feature" />
+      <option name="GLUE" value="com.cucumber.testng.step_definition" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Cucumber_TestNG_Extent_Project" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: Mobile3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Feature: WebTest" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4.5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/mobile_features/mobile_feature_2/WebTest.feature" />
+      <option name="GLUE" value="com.cucumber.testng.step_definition" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Cucumber_TestNG_Extent_Project" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: WebTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Create, Like and destroy a twite" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4.5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/api_features/api_features_2/API3.feature" />
+      <option name="GLUE" value="com.cucumber.testng.step_definition" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Cucumber_TestNG_Extent_Project" />
+      <option name="NAME_FILTER" value="^Create\, Like and destroy a twite$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Create\, Like and destroy a twite$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Create, Like and destroy a twite" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Money transfer test" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4.5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/mobile_features/mobile_feature_2/WebTest.feature" />
+      <option name="GLUE" value="com.cucumber.testng.step_definition" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Cucumber_TestNG_Extent_Project" />
+      <option name="NAME_FILTER" value="^Money transfer test$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Money transfer test$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Money transfer test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: Pay a bill" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="4.5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/mobile_features/mobile_feature_2/WebTest.feature" />
+      <option name="GLUE" value="com.cucumber.testng.step_definition" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Cucumber_TestNG_Extent_Project" />
+      <option name="NAME_FILTER" value="^Pay a bill$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm4SMFormatter --name &quot;^Pay a bill$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Pay a bill" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mvn" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="test" />
+                <option value="-Dmaven.surefire.debug" />
+                <option value="-DMode=debug" />
+                <option value="-Dview=iphone" />
+                <option value="-Dzalenium=false" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="true" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Runner" type="Remote">
+      <module name="Cucumber_TestNG_Extent_Project" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Cucumber java.Feature: Login" />
+      <item itemvalue="Cucumber java.Scenario: Create, Like and destroy a twite" />
+      <item itemvalue="Cucumber java.Feature: Mobile3" />
+      <item itemvalue="Cucumber java.Feature: WebTest" />
+      <item itemvalue="Cucumber java.Scenario: Pay a bill" />
+      <item itemvalue="Cucumber java.Scenario: Money transfer test" />
+      <item itemvalue="Maven.mvn" />
+      <item itemvalue="Remote.Runner" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Cucumber java.Scenario: Money transfer test" />
+        <item itemvalue="Cucumber java.Scenario: Pay a bill" />
+        <item itemvalue="Cucumber java.Feature: WebTest" />
+        <item itemvalue="Cucumber java.Feature: Mobile3" />
+        <item itemvalue="Cucumber java.Scenario: Create, Like and destroy a twite" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6200a67d-c8b7-481d-8953-a27a01d92486" name="Default Changelist" comment="" />
+      <created>1576491825908</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576491825908</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="75" key="#Inspections" timestamp="1579759347785">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="75" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1579759347785" />
+    <state x="361" y="73" key="#Notifications" timestamp="1576710259323">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="73" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1576710259323" />
+    <state x="2472" y="241" key="#Project_Structure" timestamp="1576563562067">
+      <screen x="1920" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2472" y="241" key="#Project_Structure/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1576563562067" />
+    <state x="279" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583818998742">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2199" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576976131040" />
+    <state x="2199" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583362013407" />
+    <state x="2199" y="102" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582850169344" />
+    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1583542971954" />
+    <state x="279" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583818998742" />
+    <state x="2613" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576968375951">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2613" y="329" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576968375951" />
+    <state x="2638" y="153" key="#com.intellij.ide.util.MemberChooser" timestamp="1582609311376">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2638" y="153" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582609311376" />
+    <state x="574" y="105" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1576715220486" />
+    <state x="499" y="193" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1583230587041">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="2544" y="272" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583199870346" />
+    <state x="2544" y="281" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582684940961" />
+    <state x="499" y="193" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1583230587041" />
+    <state x="620" y="304" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576749946219">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="620" y="304" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1576749946219" />
+    <state x="2560" y="287" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583102130317">
+      <screen x="1920" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2560" y="258" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576965021594" />
+    <state x="2560" y="287" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583102130317" />
+    <state x="512" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1579823705931" />
+    <state x="2326" y="497" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1582683654206">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2326" y="480" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1581992157421" />
+    <state x="2326" y="497" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582683654206" />
+    <state x="325" y="341" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1579565219693" />
+    <state x="2681" y="470" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1581992158984">
+      <screen x="1920" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2681" y="470" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1581992158984" />
+    <state x="2544" y="237" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582608482807">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2544" y="229" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1582071322413" />
+    <state x="2544" y="237" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582608482807" />
+    <state x="499" y="163" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1580174198249" />
+    <state x="686" y="239" width="600" height="483" key="FileChooserDialogImpl" timestamp="1583877880837">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2606" y="215" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576975390232" />
+    <state x="2606" y="239" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583275231350" />
+    <state x="2606" y="247" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582770527314" />
+    <state x="549" y="170" width="600" height="483" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583579700840" />
+    <state x="686" y="239" key="FileChooserDialogImpl/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583818991924" />
+    <state x="686" y="239" key="FileChooserDialogImpl/0.0.1920.1160/-1920.-96.1536.864@0.0.1920.1160" timestamp="1583877880837" />
+    <state width="1877" height="316" key="GridCell.Tab.0.bottom" timestamp="1583902079505">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="369" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577136629725" />
+    <state width="1877" height="332" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583379711537" />
+    <state width="1493" height="266" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1200@0.0.1536.824" timestamp="1582842762147" />
+    <state width="1877" height="402" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582850266743" />
+    <state width="1493" height="276" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583743256680" />
+    <state width="1877" height="316" key="GridCell.Tab.0.bottom/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583902079505" />
+    <state width="1877" height="316" key="GridCell.Tab.0.center" timestamp="1583902079505">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="369" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577136629725" />
+    <state width="1877" height="332" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583379711537" />
+    <state width="1493" height="266" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1200@0.0.1536.824" timestamp="1582842762147" />
+    <state width="1877" height="402" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582850266743" />
+    <state width="1493" height="276" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583743256680" />
+    <state width="1877" height="316" key="GridCell.Tab.0.center/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583902079505" />
+    <state width="1877" height="316" key="GridCell.Tab.0.left" timestamp="1583902079505">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="369" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577136629725" />
+    <state width="1877" height="332" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583379711537" />
+    <state width="1493" height="266" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1200@0.0.1536.824" timestamp="1582842762147" />
+    <state width="1877" height="402" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582850266743" />
+    <state width="1493" height="276" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583743256680" />
+    <state width="1877" height="316" key="GridCell.Tab.0.left/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583902079505" />
+    <state width="1877" height="316" key="GridCell.Tab.0.right" timestamp="1583902079505">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="369" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1577136629725" />
+    <state width="1877" height="332" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583379711537" />
+    <state width="1493" height="266" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1200@0.0.1536.824" timestamp="1582842762147" />
+    <state width="1877" height="402" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582850266743" />
+    <state width="1493" height="276" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583743256680" />
+    <state width="1877" height="316" key="GridCell.Tab.0.right/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583902079505" />
+    <state width="1877" height="316" key="GridCell.Tab.1.bottom" timestamp="1583902079506">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576977413562" />
+    <state width="1877" height="418" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583379711533" />
+    <state width="1493" height="266" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1200@0.0.1536.824" timestamp="1582842762148" />
+    <state width="1877" height="402" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582850266743" />
+    <state width="1493" height="276" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583743256680" />
+    <state width="1877" height="316" key="GridCell.Tab.1.bottom/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583902079506" />
+    <state width="1877" height="316" key="GridCell.Tab.1.center" timestamp="1583902079505">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="261" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576977413561" />
+    <state width="1877" height="418" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583379711533" />
+    <state width="1493" height="266" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1200@0.0.1536.824" timestamp="1582842762147" />
+    <state width="1877" height="402" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582850266743" />
+    <state width="1493" height="276" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583743256680" />
+    <state width="1877" height="316" key="GridCell.Tab.1.center/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583902079505" />
+    <state width="1877" height="316" key="GridCell.Tab.1.left" timestamp="1583902079505">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="261" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576977413561" />
+    <state width="1877" height="418" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583379711533" />
+    <state width="1493" height="266" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1200@0.0.1536.824" timestamp="1582842762147" />
+    <state width="1877" height="402" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582850266743" />
+    <state width="1493" height="276" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583743256680" />
+    <state width="1877" height="316" key="GridCell.Tab.1.left/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583902079505" />
+    <state width="1877" height="316" key="GridCell.Tab.1.right" timestamp="1583902079505">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="261" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576977413561" />
+    <state width="1877" height="418" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583379711533" />
+    <state width="1493" height="266" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1200@0.0.1536.824" timestamp="1582842762147" />
+    <state width="1877" height="402" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582850266743" />
+    <state width="1493" height="276" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583743256680" />
+    <state width="1877" height="316" key="GridCell.Tab.1.right/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583902079505" />
+    <state x="2294" y="100" key="Maven.ArtifactSearchDialog" timestamp="1581991789720">
+      <screen x="1920" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2294" y="100" key="Maven.ArtifactSearchDialog/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1581991789720" />
+    <state x="299" y="71" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1579570211053" />
+    <state x="2703" y="518" key="ReplaceDuplicatesPrompt" timestamp="1582602664977">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2703" y="518" key="ReplaceDuplicatesPrompt/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582602664977" />
+    <state x="2239" y="201" key="SettingsEditor" timestamp="1582685109122">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2266" y="0" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576976203640" />
+    <state x="2266" y="0" key="SettingsEditor/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1581991260424" />
+    <state x="2239" y="201" key="SettingsEditor/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582685109122" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1579064713524" />
+    <state x="93" y="93" width="1350" height="638" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583820120929">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1583732815814" />
+    <state x="581" y="332" key="com.intellij.ide.util.TipDialog" timestamp="1583806125539">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2501" y="298" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576968512889" />
+    <state x="2501" y="332" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583201579164" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1580175141251" />
+    <state x="581" y="332" key="com.intellij.ide.util.TipDialog/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583806125539" />
+    <state x="426" y="63" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579660326007">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="426" y="63" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1579660326007" />
+    <state x="540" y="132" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1576715144854">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="540" y="132" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1576715144854" />
+    <state x="2523" y="504" width="538" height="445" key="extract.method.dialog" timestamp="1582602662279">
+      <screen x="1920" y="0" width="1920" height="1200" />
+    </state>
+    <state x="2523" y="504" key="extract.method.dialog/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582602662279" />
+    <state x="828" y="210" width="538" height="445" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1580176443485" />
+    <state x="893" y="28" width="892" height="1132" key="find.popup" timestamp="1583819756866">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2813" y="28" width="892" height="1132" key="find.popup/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583294594061" />
+    <state x="2813" y="28" width="892" height="1172" key="find.popup/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582850100200" />
+    <state x="714" y="20" width="713" height="804" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1583579117916" />
+    <state x="893" y="28" width="892" height="1132" key="find.popup/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583819756866" />
+    <state x="477" y="39" key="refactoring.ChangeSignatureDialog" timestamp="1579836540352">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="477" y="39" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1579836540352" />
+    <state x="539" y="204" width="840" height="955" key="search.everywhere.popup" timestamp="1583883060268">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="2459" y="183" width="840" height="856" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1576826493842" />
+    <state x="2459" y="204" width="840" height="955" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1160@1920.0.1920.1160" timestamp="1583294913588" />
+    <state x="2459" y="211" width="840" height="988" key="search.everywhere.popup/0.0.1536.824/1920.0.1920.1200@1920.0.1920.1200" timestamp="1582850154903" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1583234814304" />
+    <state x="539" y="204" width="840" height="955" key="search.everywhere.popup/0.0.1920.1160/-1920.-96.1536.824@0.0.1920.1160" timestamp="1583809609658" />
+    <state x="539" y="204" width="840" height="955" key="search.everywhere.popup/0.0.1920.1160/-1920.-96.1536.864@0.0.1920.1160" timestamp="1583883060268" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/cucumber/testng/page_objects/web/zb_pages/TransferFundsPage.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Remote">
+        <watch expression="zeroBankAction.getMessageDisplayed()" language="JAVA" />
+        <watch expression="Settings.ZB_URL" language="JAVA" />
+        <watch expression="Settings.ZB_URL" language="JAVA" />
+        <watch expression="browserType.name()" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

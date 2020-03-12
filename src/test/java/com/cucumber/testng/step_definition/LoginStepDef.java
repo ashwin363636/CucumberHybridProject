@@ -13,13 +13,14 @@ import static org.testng.Assert.assertTrue;
 
 public class LoginStepDef {
 
-    LoginCredentials loginCredentials = new LoginCredentials();
+    private LoginCredentials loginCredentials;
     private LoginActions loginActions;
     private BoxActions boxActions;
 
-    public LoginStepDef(LoginActions loginActions, BoxActions boxActions) {
+    public LoginStepDef(LoginActions loginActions, BoxActions boxActions, LoginCredentials loginCredentials) {
         this.loginActions = loginActions;
         this.boxActions = boxActions;
+        this.loginCredentials = loginCredentials;
     }
 
     @Given("^Open Application and Enter url$")
@@ -31,13 +32,13 @@ public class LoginStepDef {
     @When("^user enter \"([^\"]*)\" and \"([^\"]*)\"$")
     public void user_enter(String username, String password) {
         System.out.println("Perform Login Action");
-        loginCredentials.setUsername(username);
-        loginCredentials.setPassword(password);
+        this.loginCredentials.setUsername(username);
+        this.loginCredentials.setPassword(password);
         loginActions.performLogin(loginCredentials);
     }
 
     @Then("^verify I see Logout Link$")
-    public void verify_I_see_Logout_Link() throws Throwable {
+    public void verify_I_see_Logout_Link() {
         System.out.println("Verifying logout link");
         assertTrue(loginActions.isLogoutLinkVisible());
     }

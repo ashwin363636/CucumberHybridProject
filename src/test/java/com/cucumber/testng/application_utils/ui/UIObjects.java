@@ -33,8 +33,8 @@ public class UIObjects {
     // Action Functions
     //****************************
 
-    public static void click(String... locatorKey) {
-        for (String key : locatorKey) {
+    public static void click(By... locatorKey) {
+        for (By key : locatorKey) {
             click(key);
         }
     }
@@ -154,18 +154,6 @@ public class UIObjects {
         action.moveToElement(element);
         action.click(element);
         action.build().perform();
-    }
-
-    public static void clickLink(String text) {
-        click("//a[text()='" + text + "']");
-    }
-
-    public static void clickLinkWithPatialText(String text) {
-        click("//a[contains(text(),'" + text + "')]");
-    }
-
-    public static void clickElementWithPartialText(String partialText) {
-        click("//*[contains(text(),'" + partialText + "')]");
     }
 
     public static void input(By locatorKey, String data) {

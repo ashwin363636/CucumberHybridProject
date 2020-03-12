@@ -1,7 +1,7 @@
 package com.cucumber.testng.application_utils.ui.web_utils;
 
-import com.cucumber.testng.page_objects.web.LoginPage;
-import com.cucumber.testng.page_objects.web.ZBLandingPage;
+import com.cucumber.testng.page_objects.web.ifmdx.LoginPage;
+import com.cucumber.testng.page_objects.web.zb_pages.ZBLandingPage;
 import com.cucumber.testng.project_constants.constants.Settings;
 
 import static com.cucumber.testng.page_objects.UIBasePage.getDriver;

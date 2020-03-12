@@ -1,22 +1,22 @@
-Feature: Testing the login feature
-  so we can verify no unauthorised user
-  can login to the system
+Feature: Testing the web view of the Zero bank
 
-  Scenario Outline: Web failure Test
-    Given Open Application and Enter url
-    When user enter "<Username>" and "<Password>"
-    Then verify I see Logout Link
-
+  Scenario Outline: Pay a bill
+    Given Open Application in Web view and Enter url
+    When user enter "<username>" and "<password>" in Zero BAnk App
+    Then I can pay my bill
+      | Sprint | Savings | 100 | 2019-09-28 | Test Payment |
+    #And I see a success message "The payment was successfully submitted."
+    And I can Logout Link
     Examples:
-      | Username | Password  |
-      | system1  | QwertY123 |
-      | system   | M00nb0y   |
+      | username | password |
+      | username | password |
 
-  Scenario Outline: Web Second Test
-    Given Open Application and Enter url
-    When user enter "<Username>" and "<Password>"
-    Then verify I see Logout Link
-
+  Scenario Outline: Money transfer test
+    Given Open Application in Web view and Enter url
+    When user enter "<username>" and "<password>" in Zero BAnk App
+    Then I can do a Money transfer
+    And I see a success message "You successfully submitted your transaction."
+    And I can Logout Link
     Examples:
-      | Username | Password |
-      | system   | M00nb0y  |
+      | username | password |
+      | username | password |

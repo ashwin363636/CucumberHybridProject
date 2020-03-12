@@ -32,6 +32,8 @@ public class ConfigReader {
         Settings.SeleniumGridHub = p.getProperty("SeleniumGrid");
         //Historical Report
         Settings.HistoricalReport = p.getProperty("HistoricalReport");
+        //General store APK name
+        Settings.GS_APP = p.getProperty("GS_APP");
         //Application URL
         Settings.IMX_URL = p.getProperty("IMX_URL");
         Settings.ZB_URL = p.getProperty("ZB_URL");

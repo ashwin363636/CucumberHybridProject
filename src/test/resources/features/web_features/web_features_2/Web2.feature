@@ -1,13 +1,11 @@
-Feature: Testing the Box Management feature
+Feature: Testing the web view of the Zero bank
 
-  Scenario Outline: Create a new Box
-    Given Open Application and Enter url
-    When user enter "<Username>" and "<Password>"
-    And Create a Box
-    Then Box is Created in the system
-    And I can access the box name in Login Action
-    And I can access the box name in Login Step defination
-
+  Scenario Outline: Money transfer test
+    Given Open Application in Web view and Enter url
+    When user enter "<username>" and "<password>" in Zero BAnk App
+    Then I can do a Money transfer
+    And I see a success message "You successfully submitted your transaction."
+    And I can Logout Link
     Examples:
-    |Username|Password|
-    |system |M00nb0y |
+      | username | password |
+      | username | password |
